@@ -27,13 +27,14 @@
         </config-file>
 
         <config-file parent="application" target="AndroidManifest.xml">
-            <activity android:label="com.napolitano.cordova.plugin.intent.IntentPlugin" android:name="tiktok.com">
+            <activity android:label="com.napolitano.cordova.plugin.intent.IntentPlugin">
                 <intent-filter android:autoVerify="true">
                     <action android:name="android.intent.action.VIEW" />
                     <action android:name="android.intent.action.SEND" />
                     <category android:name="android.intent.category.DEFAULT" />
                     <category android:name="android.intent.category.BROWSABLE" />                                            
-                    <data android:host="tiktok.com" android:scheme="https" />
+                    <!-- <data android:host="tiktok.com" android:scheme="https" /> -->
+                    <data android:mimeType="*/*" />
                 </intent-filter>
             </activity>
         </config-file>
