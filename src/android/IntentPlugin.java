@@ -69,7 +69,7 @@ public class IntentPlugin extends CordovaPlugin {
             context.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
             return false;
         }
-
+        
         Intent intent = cordova.getActivity().getIntent();
         context.sendPluginResult(new PluginResult(PluginResult.Status.OK, getIntentJson(intent)));
         return true;

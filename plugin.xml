@@ -26,6 +26,18 @@
             </feature>
         </config-file>
 
+        <config-file parent="application" target="AndroidManifest.xml">
+            <activity android:label="com.napolitano.cordova.plugin.intent.IntentPlugin" android:name="tiktok.com">
+                <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW" />
+                    <action android:name="android.intent.action.SEND" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />                                            
+                    <data android:host="tiktok.com" android:scheme="https" />
+                </intent-filter>
+            </activity>
+        </config-file>
+
         <js-module src="www/android/IntentPlugin.js" name="IntentPlugin">
             <clobbers target="IntentPlugin" />
         </js-module>
